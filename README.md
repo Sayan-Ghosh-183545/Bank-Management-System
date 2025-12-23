@@ -4,7 +4,7 @@ A console-based banking application built with Java and MySQL that provides secu
 
 ## 🚀 Features
 
-- **Account Creation**: New user registration with 6-digit PIN validation
+- **Account Creation**: New user registration with 4-digit PIN validation
 - **Secure Authentication**: PIN-based login system for existing users
 - **Account Management**: Complete CRUD operations for banking accounts
 - **Database Integration**: MySQL database connectivity using JDBC
@@ -25,85 +25,7 @@ Before running this application, ensure you have:
 - Java JDK 8 or higher installed
 - MySQL Server installed and running
 - MySQL JDBC driver added to classpath
-- MySQL database named `sayandb` created
-
-## 🗄️ Database Setup
-
-1. Create a MySQL database:
-```sql
-CREATE DATABASE sayandb;
-```
-
-2. Create the required table:
-```sql
-USE sayandb;
-CREATE TABLE bms (
-    pin INT PRIMARY KEY,
-    name VARCHAR(100) NOT NULL,
-    balance INT DEFAULT 0
-);
-```
-
-## 🚀 Installation & Setup
-
-1. **Clone the repository**:
-```bash
-git clone https://github.com/Sayan-Ghosh-183545/bank-management-system.git
-cd bank-management-system
-```
-
-2. **Update database credentials** in the connection string:
-```java
-// Update in ExistingUser.java and NewUser.java
-Connection connection = DriverManager.getConnection(
-    "jdbc:mysql://localhost:3306/sayandb",
-    "your_username", 
-    "your_password"
-);
-```
-
-3. **Compile and run**:
-```bash
-javac -cp ".:mysql-connector-java.jar" *.java
-java -cp ".:mysql-connector-java.jar" Main
-```
-
-## 💻 Usage
-
-### Main Menu Options:
-- **0**: Create new user account
-- **1**: Access existing user account
-- **2**: Exit application
-
-### New User Registration:
-1. Enter a unique 6-digit PIN
-2. Provide your name
-3. Choose to make an initial deposit (optional)
-4. Account created successfully!
-
-### Existing User Login:
-1. Enter your registered PIN
-2. Access account management features (under development)
-
-## 📁 Project Structure
-
-```
-src/
-├── Main.java           # Application entry point and main menu
-├── NewUser.java        # New user registration functionality
-├── ExistingUser.java   # Existing user login and operations
-└── Methods.java        # Utility methods (PIN validation)
-```
-
-## 🔮 Future Enhancements
-
-- [ ] Complete implementation of withdrawal, deposit, and balance check features
-- [ ] Account deletion functionality
-- [ ] Transaction history tracking
-- [ ] Enhanced security with password hashing
-- [ ] Input validation and error handling improvements
-- [ ] GUI implementation using Swing/JavaFX
-- [ ] Multi-threading support for concurrent users
+- MySQL database named `revision` created
 
 ## 🤝 Contributing
 
